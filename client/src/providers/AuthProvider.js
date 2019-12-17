@@ -1,10 +1,10 @@
 import React from 'react'
 import axios from 'axios'
 
- export const AuthContext = React.createContext();
+export const AuthContext = React.createContext();
 export const AuthConsumer = AuthContext.Consumer;
 
-class AuthProvider extends React.Component {
+export class AuthProvider extends React.Component {
   state = { user: null, };
 
   handleRegister = (user, history) => {
