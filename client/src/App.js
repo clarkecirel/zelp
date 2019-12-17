@@ -11,16 +11,16 @@ import FetchUser from './components/FetchUser';
 const App = () => (
   <>
     <NavBar/>
-    <Container>
       <FetchUser>
+    <Container>
         <Switch>
           <Route exact path = '/' component = {Home} />
           <Route exact path = '/Login' component = {Login} />
           <Route exact path = '/Register' component = {Register} />
           <Route component = {NoMatch} />
         </Switch>
-      </FetchUser>
     </Container>
+      </FetchUser>
   </>
 );
 

@@ -7,16 +7,16 @@ export const AuthConsumer = AuthContext.Consumer;
 export class AuthProvider extends React.Component {
   state = { user: null, };
 
-  handleRegister = (user, history) => {
-    axios.post("/api/auth", user)
-      .then( res => {
-        this.setState({ user: res.data.data, });
-        history.push("/");
+      handleRegister = (user, history) => {
+      axios.post("/api/auth", user)
+        .then( res => {
+          this.setState({ user: res.data.data, });
+          history.push("/");
+        })
+      .catch( res => {
+        console.log(res);
       })
-    .catch( res => {
-      console.log(res);
-    })
-  }
+      }
   
   handleLogin = (user, history) => {
     axios.post("/api/auth/sign_in", user)
